@@ -3,7 +3,6 @@ import {
   enrichTweet,
   type EnrichedTweet,
   type TweetProps,
-  type TwitterComponents,
 } from "react-tweet";
 import { getTweet, type Tweet } from "react-tweet/api";
 
@@ -213,12 +212,10 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
       )}
       {!tweet.video &&
         !tweet.photos &&
-        // @ts-ignore
         tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
           <Image
             src={
-              // @ts-ignore
-              tweet.card.binding_values.thumbnail_image_large.image_value.url
+              tweet.card?.binding_values.thumbnail_image_large.image_value.url
             }
             width={600}
             height={400}
@@ -232,12 +229,10 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
 
 export const MagicTweet = ({
   tweet,
-  components,
   className,
   ...props
 }: {
   tweet: Tweet;
-  components?: TwitterComponents;
   className?: string;
 }) => {
   const enrichedTweet = enrichTweet(tweet);
