@@ -212,9 +212,11 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
       )}
       {!tweet.video &&
         !tweet.photos &&
+        //@ts-expect-error Property 'card' does not exist on type 'EnrichedTweet'
         tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
           <Image
-            src={
+          src={
+              //@ts-expect-error Property 'card' does not exist on type 'EnrichedTweet'
               tweet.card?.binding_values.thumbnail_image_large.image_value.url
             }
             width={600}

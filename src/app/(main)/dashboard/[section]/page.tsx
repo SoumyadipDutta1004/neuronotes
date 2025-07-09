@@ -11,7 +11,7 @@ import {
 } from "@/constants/document-constants";
 
 type SectionsProps = {
-  params: { section: string };
+  params: Promise<{ section: string }>;
 };
 
 export default async function Sections({ params }: SectionsProps) {
