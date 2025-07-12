@@ -23,6 +23,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { SignOutButton } from "@clerk/nextjs";
+import Link from "next/link";
 
 export function NavUser({
   user,
@@ -79,10 +80,12 @@ export function NavUser({
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
+              <Link href={"/user-profile"}>
+                <DropdownMenuItem>
                 <IconUserCircle />
-                Manage Account
+                  Manage Account
               </DropdownMenuItem>
+              </Link>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>

@@ -1,4 +1,3 @@
-// import { TweetCard } from "@/components/magicui/tweet-card";
 import LinkCard from "@/components/link-card";
 import { TweetCard } from "@/components/magicui/tweet-card";
 import NoteCard from "@/components/note-card";

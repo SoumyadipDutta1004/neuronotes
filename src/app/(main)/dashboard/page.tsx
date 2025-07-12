@@ -2,6 +2,7 @@
 // import { TweetCard } from "@/components/magicui/tweet-card";
 // import YoutubeCard from "@/components/youtube-card";
 
+
 // export default function Dashboard() {
 //   return (
 //     <div className="flex h-full w-full flex-col px-6 sm:px-10 overflow-y-scroll">
@@ -45,7 +46,6 @@ export default function page() {
 
   return (
     <div>
-      page
     </div>
   );
 }
